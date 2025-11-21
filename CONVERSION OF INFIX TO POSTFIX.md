@@ -1,40 +1,49 @@
-# Exp.No:32  
-## CONVERSION OF INFIX TO POSTFIX
+# Exp.No:31  
+## IMPLEMENTATION OF STACK
 
 ---
 
 ### AIM  
-To write a Python program to convert a given Infix expression to Postfix expression by following the precedence and associative rules. The input expression contains only Division, Subtraction, and Bitwise AND operators. A dictionary is used to set the priority for operators, and a set is used to hold the operators used in the given expression.
+To write a Python program to implement a stack using a list and its built-in methods (`append()`, `pop()`).
 
 ---
 
 ### ALGORITHM
 
 1. **Start the program.**
-2. **Initialize an empty stack** and an empty output string.
-3. **Iterate through each character** in the infix expression:
-   - If the character is **not an operator**, append it directly to the output string.
-   - If the character is an **open parenthesis '('**, push it onto the stack.
-   - If the character is a **close parenthesis ')'**, pop from the stack and append to the output until encountering a left parenthesis '('.
-   - If the character is an **operator**, handle it based on precedence:
-     - While there’s an operator at the top of the stack with higher or equal precedence, pop the stack and append those operators to the output.
-     - Push the current operator onto the stack.
-4. **Use a priority dictionary** to define operator precedence, ensuring higher precedence operators are placed before lower precedence ones.
-5. Once the expression is fully processed, continue popping any remaining operators from the stack and append them to the output.
-6. **Return the final postfix expression.**
-7. **Print the result.**
-8. **End the program.**
+2. **Define a class `st`** with the following methods:
+   - `push(self, num)`: Adds the number `num` to the stack.
+   - `pop(self)`: Removes and returns the top element from the stack.
+3. **Create a stack object `s`** using the class `st`.
+4. **Input the stack size**: Take an integer input `size` to define the size of the stack.
+5. **Loop through numbers from 1 to size**: Add only the odd numbers to the stack using the `push()` method.
+6. **Display the elements** in the stack after the loop completes.
+7. **Call `pop()`** to remove the top element from the stack and display the popped element.
+8. **Display the stack again** to show the remaining elements.
+9. **End the program.**
 
 ---
 
 ### PROGRAM
 
 ```
+Reg.no: 212223060210
+Name: Prince Andrew A
 
+stack = []
+for i in range (5):
+    a=input()
+    stack.append(a)
+print("Stack before elements are popped")
+print(stack)
+print()
+for i in range(2):
+    stack.pop()
+print('Stack after elements are popped:')
+print(stack)
 ```
-
-### OUTPUT
-
+### OUTPUT 
+<img width="1145" height="300" alt="image" src="https://github.com/user-attachments/assets/87f52a6e-0aa6-43d0-b879-6f9bdec72e29" />
 
 ### RESULT
-
+Successfully implemented a stack using Python list. Items were added using append() and removed using pop(), demonstrating LIFO (Last In First Out) behavior of stack.
